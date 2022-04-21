@@ -1,0 +1,70 @@
+body {
+    background-color: #eccb96;
+    font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+.topnav {
+    background-color: #f29909;
+    overflow: hidden;
+    position: absolute;
+    left: 15%;
+    top: 7%;
+    width: 85%;
+}
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #b79c8c;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #F7C473;
+    color: white;
+}
+#logo {
+    width: 150px;
+    position: absolute;
+    left: 3%;
+}
+.text{
+    position: absolute;
+    top:200px;
+    color: #383838;
+    font-size: 18px;
+    line-height: 1.6;
+    padding-left: 30px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 1px;
+}
+
+.button2:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #4c98af;
+
+}
+
+.button2 {
+    background-color: #4c98af;
+    color: white;
+}

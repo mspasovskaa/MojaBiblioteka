@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>МојаБиблиотека - Контакт</title>
+    <link rel="stylesheet" type="text/css" href="/css/map.css">
+    <script type="text/javascript" src="/map.js"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.22/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.22/"></script>
+
+</head>
+<body>
+<img src="/images/logo.png" id="logo"/>
+<div class="topnav">
+    <a href="/library">Почетна</a>
+    <a href="/library/listbooks">Книги</a>
+    <a href="/library/myBooks" sec:authorize="hasRole('ROLE_USER')">Мои книги</a>
+    <a href="/library/borrowed" sec:authorize="hasRole('ROLE_ADMIN')">Позајмици</a>
+    <a href="/library/reservationlist" sec:authorize="hasRole('ROLE_ADMIN')">Резервации</a>
+    <a href="/library/clients" sec:authorize="hasRole('ROLE_ADMIN')">Корисници</a>
+    <a class="active" href="/library/map">Контакт</a>
+    <a href="/library/accountInfo" sec:authorize="isAuthenticated()">Мој профил</a>
+    <a href="/login" sec:authorize="isAnonymous()">Најави се</a>
+    <a href="/logout" sec:authorize="isAuthenticated()">Одјави се</a></div>
+</div>
+
+<div class="row">
+
+    <div class="embed-container column right" >
+        <div id="viewDiv" class="myDiv" style="width: 900px;  height: 485px; position: absolute;top:150px;left:20px;border: 8px solid #ff8b3d;
+    border-radius: 30px 30px 30px 30px; margin:0 auto;
+    box-shadow: 10px 10px 8px #ff8b3d;">
+        </div>
+    </div>
+
+    <div class="column left" style="width: 400px;  height: 100px;left:950px; position: absolute">
+        <input type="hidden" th:value="21.4200691862" id="longitude">
+        <input type="hidden" th:value="41.9994202453" id="latitude">
+        <p id="info">Кликнете било каде на мапата за да добиете навигација до библиотеката</p>
+
+        <p>
+        <p><b>Градска библиотека „Блаже Конески“-Скопје</b></p>
+        <p>Адреса: бул.Партизански Одреди 22</p>
+        <p>Телефонски број: 023162544</p>
+        <p>Работно време:</p>
+        <ul>
+            <li>Понеделник-Петок: 08:00 - 20:00</li>
+            <li>Сабота: 07:00 - 15:00</li>
+        </ul>
+        <br>
+        <span id="distanca"><b></b></span>
+        </p>
+    </div>
+
+</div>
+
+
+</body>
+</html>
